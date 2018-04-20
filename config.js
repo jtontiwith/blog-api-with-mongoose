@@ -4,3 +4,4 @@ exports.TEST_DATABASE_URL = process.env.TEST_DATABASE_URL || 'mongodb://localhos
 exports.PORT = process.env.PORT || 8080;
 
 //not sure about the "test" part on 'mongodb://localhost/test-tempBlogDb';
+

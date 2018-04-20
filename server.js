@@ -77,6 +77,20 @@ app.put('/posts/:id', (req, res) => {
       return res.status(400).json({ message: message });
   }
 
+  app.delete('/posts/:id', (req, res) => {
+    Blog
+    .findById(req.params.id)  
+    //.findByIdAndRemove(req.params.id)
+      .then(() => {
+        res.status(204).json({ message: 'success' });
+      })
+      .catch(err => {
+        console.error(err);
+        res.status(500).json({ error: 'something went terribly wrong' });
+      });
+  }); 
+
+
   //we only support a subset of fields being updateable.
   // if the user sent over any of the updatableFields, we udpate those values
   // in document
