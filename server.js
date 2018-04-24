@@ -112,6 +112,7 @@ app.put('/posts/:id', (req, res) => {
 
 let server;
 
+
 function runServer(databaseUrl, port = PORT) {
   return new Promise((resolve, reject) => { //<-this is for testing, to make sure the server is running  
     mongoose.connect(databaseUrl, err => { //err is iherent to mongoose
