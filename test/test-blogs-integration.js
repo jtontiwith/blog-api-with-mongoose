@@ -147,7 +147,7 @@ describe('Blogs API resource', function() {
           expect(res.body).to.include.keys('id', 'title', 'content', 'author');
       });
     });
-
+    
     describe('PUT endpoint', function() {
       //strategy:
       // 1. Get a blog from the db
@@ -178,13 +178,13 @@ describe('Blogs API resource', function() {
         });
       });
     });
-
+    
     describe('it should delete a post', function() {
     //strategy:
     // 1. get post
     // 2. make a delete request for that post, according to it's id
     // 3. verify that the post is deleted
-
+    /*
     it('delete a blog by id', function() {
       let blog;
 
@@ -202,6 +202,7 @@ describe('Blogs API resource', function() {
           expect(_blog).to.be.null;
          });
       });
+      */  
     });
   });
 });
